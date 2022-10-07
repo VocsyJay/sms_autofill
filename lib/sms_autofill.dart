@@ -111,7 +111,7 @@ class _PinFieldAutoFillState extends State<PinFieldAutoFill> with CodeAutoFill {
       codeLength: widget.codeLength,
       alignment: MainAxisAlignment.center,
       defaultBoxSize: widget.boxSize!,
-      margin: 5.0,
+      margin: 1.0,
       selectedBoxSize: widget.boxSize,
       textStyle: TextStyle(fontSize: 16.0),
       defaultDecoration: _pinPutDecoration.copyWith(
