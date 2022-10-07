@@ -58,6 +58,7 @@ class PinFieldAutoFill extends StatefulWidget {
   final PinDecoration decoration;
   final FocusNode? focusNode;
   final double? boxSize;
+  final double? margin;
   final Cursor? cursor;
   final TextInputType keyboardType;
   final TextInputAction textInputAction;
@@ -80,6 +81,7 @@ class PinFieldAutoFill extends StatefulWidget {
           textStyle: TextStyle(color: Colors.black)),
       this.onCodeSubmitted,
       this.onCodeChanged,
+       this.margin,
       this.currentCode,
       this.autoFocus = false,
       this.codeLength = 6,
@@ -111,7 +113,7 @@ class _PinFieldAutoFillState extends State<PinFieldAutoFill> with CodeAutoFill {
       codeLength: widget.codeLength,
       alignment: MainAxisAlignment.center,
       defaultBoxSize: widget.boxSize!,
-      margin: 1.0,
+      margin: widget.margin!,
       selectedBoxSize: widget.boxSize,
       textStyle: TextStyle(fontSize: 16.0),
       defaultDecoration: _pinPutDecoration.copyWith(
