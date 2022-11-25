@@ -59,6 +59,8 @@ class _HomePageState extends State<HomePage> {
               Spacer(),
 
               PinFieldAutoFill(
+                deColor: Colors.white,
+                margin: 0.0,
                 codeLength: 6,
                 boxSize: 40.0,
                 currentCode: _code,
@@ -103,8 +105,7 @@ class _HomePageState extends State<HomePage> {
               ),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (_) => CodeAutoFillTestPage()));
+                  Navigator.of(context).push(MaterialPageRoute(builder: (_) => CodeAutoFillTestPage()));
                 },
                 child: Text("Test CodeAutoFill mixin"),
               )
@@ -121,8 +122,7 @@ class CodeAutoFillTestPage extends StatefulWidget {
   _CodeAutoFillTestPageState createState() => _CodeAutoFillTestPageState();
 }
 
-class _CodeAutoFillTestPageState extends State<CodeAutoFillTestPage>
-    with CodeAutoFill {
+class _CodeAutoFillTestPageState extends State<CodeAutoFillTestPage> with CodeAutoFill {
   String? appSignature;
   String? otpCode;
 

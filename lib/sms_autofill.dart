@@ -60,7 +60,7 @@ class PinFieldAutoFill extends StatefulWidget {
   final double? margin;
   final Cursor? cursor;
   final TextInputType keyboardType;
-  final Color? deColor;
+  final Color deColor;
   final TextInputAction textInputAction;
   final bool enableInteractiveSelection;
   final String? smsCodeRegexPattern;
@@ -73,7 +73,7 @@ class PinFieldAutoFill extends StatefulWidget {
       this.focusNode,
       this.boxSize,
       this.cursor,
-      this.deColor,
+      required this.deColor,
       this.inputFormatters,
       this.enableInteractiveSelection = true,
       this.controller,
