@@ -59,6 +59,7 @@ class _HomePageState extends State<HomePage> {
               Spacer(),
 
               PinFieldAutoFill(
+                textColor: Colors.blueAccent,
                 deColor: Colors.white,
                 margin: 0.0,
                 codeLength: 6,
